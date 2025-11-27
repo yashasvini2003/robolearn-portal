@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RoboLearn | Robotics & Coding for Beginners</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="RoboLearn is a beginner-friendly robotics & coding learning portal with lessons, quizzes, and troubleshooting help for students and tutors."
+  />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav__logo">Robo<span>Learn</span></div>
+    <nav class="nav__links" id="navLinks">
+      <a href="#hero">Home</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#troubleshooting">Troubleshooting</a>
+      <a href="#about">About</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+      <div class="hero__content">
+        <h1>Teach & Learn Robotics the Simple Way.</h1>
+        <p>
+          RoboLearn is a mini learning portal designed for beginners to explore
+          robotics and coding through structured lessons, interactive quizzes,
+          and practical troubleshooting tips.
+        </p>
+        <div class="hero__actions">
+          <a href="#lessons" class="btn btn--primary">Start Learning</a>
+          <a href="#about" class="btn btn--ghost">For Tutors</a>
+        </div>
+        <p class="hero__note">
+          Perfect for students, clubs, and tutors who want a clear, hands-on
+          introduction to robotics.
+        </p>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__card">
+          <h2>Today's Focus</h2>
+          <p class="hero__tag">Sensors & Motors</p>
+          <ul>
+            <li>How robots see the world</li>
+            <li>Line-following logic</li>
+            <li>Beginner Arduino code</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- LESSONS OVERVIEW -->
+    <section id="lessons" class="section section--light">
+      <div class="section__header">
+        <h2>Core Lessons</h2>
+        <p>Four bite-sized modules that build a strong robotics foundation.</p>
+      </div>
+
+      <div class="lessons__layout">
+        <!-- Lesson Cards -->
+        <div class="lessons__cards">
+          <button class="lesson-card active" data-lesson="intro">
+            <h3>1. Introduction to Robotics</h3>
+            <p>What robots are, where we use them, and key components.</p>
+            <span class="lesson-card__tag">Beginner · 10 min</span>
+          </button>
+
+          <button class="lesson-card" data-lesson="sensors">
+            <h3>2. Sensors & Motors</h3>
+            <p>How robots sense and move in the real world.</p>
+            <span class="lesson-card__tag">Beginner · 15 min</span>
+          </button>
+
+          <button class="lesson-card" data-lesson="coding">
+            <h3>3. Coding a Simple Robot</h3>
+            <p>Basic logic using Arduino-style pseudocode.</p>
+            <span class="lesson-card__tag">Beginner · 20 min</span>
+          </button>
+
+          <button class="lesson-card" data-lesson="project">
+            <h3>4. Mini Project: Line Follower</h3>
+            <p>Combine everything into a hands-on project.</p>
+            <span class="lesson-card__tag">Project · 30+ min</span>
+          </button>
+        </div>
+
+        <!-- Lesson Detail Panel -->
+        <article class="lesson-detail">
+          <!-- INTRO LESSON -->
+          <div class="lesson-detail__content active" id="lesson-intro">
+            <h3>1. Introduction to Robotics</h3>
+            <p>
+              A <strong>robot</strong> is a machine that can sense its
+              environment, make decisions, and perform actions automatically.
+              We see robots in:
+            </p>
+            <ul>
+              <li>Factories (assembly robots, welders)</li>
+              <li>Hospitals (surgical robots, delivery bots)</li>
+              <li>Homes (vacuum robots)</li>
+              <li>Space (Mars rovers)</li>
+            </ul>
+            <p>Most robots include three key parts:</p>
+            <ol>
+              <li><strong>Brain</strong> – a microcontroller or computer.</li>
+              <li><strong>Sensors</strong> – to detect light, distance, lines, etc.</li>
+              <li><strong>Actuators</strong> – motors and servos to move.</li>
+            </ol>
+            <p class="lesson-detail__tip">
+              Teaching tip: Ask students to list where they’ve seen robots in
+              daily life. It makes the topic more relatable.
+            </p>
+          </div>
+
+          <!-- SENSORS LESSON -->
+          <div class="lesson-detail__content" id="lesson-sensors">
+            <h3>2. Sensors & Motors</h3>
+            <p>
+              For a robot to react intelligently, it needs
+              <strong>sensors</strong> and <strong>motors</strong>.
+            </p>
+            <h4>Common Sensors</h4>
+            <ul>
+              <li><strong>IR sensor</strong> – detects lines or obstacles.</li>
+              <li><strong>Ultrasonic sensor</strong> – measures distance.</li>
+              <li><strong>Light sensor</strong> – senses brightness.</li>
+            </ul>
+            <h4>Motors</h4>
+            <p>
+              Robots usually use <strong>DC motors</strong> or
+              <strong>servo motors</strong> to move wheels or arms.
+            </p>
+            <p>
+              Example idea: A <strong>line-following robot</strong> uses IR
+              sensors to detect a black line on a white surface and adjusts its
+              motors to stay on track.
+            </p>
+            <p class="lesson-detail__tip">
+              Teaching tip: Show real sensors or pictures, and ask students what
+              each could be used for.
+            </p>
+          </div>
+
+          <!-- CODING LESSON -->
+          <div class="lesson-detail__content" id="lesson-coding">
+            <h3>3. Coding a Simple Robot</h3>
+            <p>
+              Robots follow <strong>instructions written in code</strong>. Here
+              is a simplified example of blinking an LED on a microcontroller:
+            </p>
+
+            <pre><code>// Blink an LED (Arduino-style pseudocode)
+void setup() {
+  pinMode(13, OUTPUT);   // Set pin 13 as an output
+}
+
+void loop() {
+  digitalWrite(13, HIGH); // Turn LED on
+  delay(1000);            // Wait 1 second
+  digitalWrite(13, LOW);  // Turn LED off
+  delay(1000);            // Wait 1 second
+}</code></pre>
+
+            <p>
+              The robot repeats the <code>loop()</code> function forever. We can
+              use similar logic to move motors or read sensors.
+            </p>
+            <p class="lesson-detail__tip">
+              Teaching tip: Let students change the delay time and predict what
+              happens before running the code.
+            </p>
+          </div>
+
+          <!-- PROJECT LESSON -->
+          <div class="lesson-detail__content" id="lesson-project">
+            <h3>4. Mini Project: Line-Following Robot</h3>
+            <p>
+              In this mini project, students build a robot that follows a black
+              line on a white surface.
+            </p>
+
+            <h4>Hardware (example)</h4>
+            <ul>
+              <li>1 × Microcontroller (e.g., Arduino UNO)</li>
+              <li>2 × DC motors + motor driver</li>
+              <li>2 × IR line sensors</li>
+              <li>Chassis, wheels, battery pack</li>
+            </ul>
+
+            <h4>Basic Logic</h4>
+            <ol>
+              <li>Read left and right sensor values.</li>
+              <li>If left sees black, turn slightly left.</li>
+              <li>If right sees black, turn slightly right.</li>
+              <li>If both see white, go straight.</li>
+            </ol>
+
+            <pre><code>// Pseudocode for line-following logic
+void loop() {
+  int left = readLeftSensor();
+  int right = readRightSensor();
+
+  if (left == BLACK && right == BLACK) {
+    moveForward();
+  } else if (left == BLACK && right == WHITE) {
+    turnLeft();
+  } else if (left == WHITE && right == BLACK) {
+    turnRight();
+  } else {
+    stopMotors(); // Lost the line
+  }
+}</code></pre>
+
+            <p class="lesson-detail__tip">
+              Teaching tip: Have students first draw the decision table on
+              paper, then translate it to code.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- QUIZ SECTION -->
+    <section id="quiz" class="section">
+      <div class="section__header">
+        <h2>Quick Check: Robotics Basics Quiz</h2>
+        <p>Test your understanding with a short multiple-choice quiz.</p>
+      </div>
+
+      <div class="quiz" id="quizContainer">
+        <!-- Questions are injected via JavaScript -->
+      </div>
+      <button class="btn btn--primary" id="submitQuiz">Check Answers</button>
+      <p class="quiz__result" id="quizResult"></p>
+    </section>
+
+    <!-- TROUBLESHOOTING SECTION -->
+    <section id="troubleshooting" class="section section--light">
+      <div class="section__header">
+        <h2>Troubleshooting & FAQs</h2>
+        <p>
+          Common issues beginners face when working with robotics, plus simple
+          explanations you can share with students.
+        </p>
+      </div>
+
+      <div class="troubleshooting">
+        <details>
+          <summary>My robot is not moving at all.</summary>
+          <p>
+            Check the battery connections, ensure the power switch is on, and
+            verify that the motor driver is wired correctly. Also confirm that
+            your code is uploading to the correct board/port.
+          </p>
+        </details>
+
+        <details>
+          <summary>Sensors always read the same value.</summary>
+          <p>
+            Make sure the sensors are correctly powered (VCC/GND), positioned
+            close enough to the surface, and that your code is reading the
+            correct pins. Try printing the sensor values to the serial monitor.
+          </p>
+        </details>
+
+        <details>
+          <summary>The line-following robot keeps losing the line.</summary>
+          <p>
+            Increase the contrast between the line and the background, slow
+            down the robot, and re-calibrate the threshold values you use for
+            black vs white.
+          </p>
+        </details>
+
+        <details>
+          <summary>Students are confused by the code.</summary>
+          <p>
+            Break the code into small blocks, explain each function, and relate
+            it back to a real-world decision (IF this happens, THEN do that).
+            Encourage students to predict behavior before running the code.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ABOUT / FOR TUTORS -->
+    <section id="about" class="section">
+      <div class="section__header">
+        <h2>For Tutors & Clubs</h2>
+        <p>
+          How to use RoboLearn as a mini curriculum for your robotics workshops.
+        </p>
+      </div>
+
+      <div class="about">
+        <div class="about__card">
+          <h3>Suggested Flow</h3>
+          <ol>
+            <li>Lesson 1 – Discuss real-world robots and components.</li>
+            <li>Lesson 2 – Show sensors and motors (or images/videos).</li>
+            <li>Lesson 3 – Walk through basic code on a projector.</li>
+            <li>
+              Lesson 4 – Build or simulate a line-following robot as a group.
+            </li>
+          </ol>
+        </div>
+
+        <div class="about__card">
+          <h3>Skills Developed</h3>
+          <ul>
+            <li>Problem-solving and logical thinking</li>
+            <li>Basic electronics and coding</li>
+            <li>Collaboration and communication</li>
+            <li>Confidence working with technology</li>
+          </ul>
+        </div>
+
+        <div class="about__card">
+          <h3>How This Project Helps You</h3>
+          <p>
+            This portal demonstrates experience in web development,
+            educational content design, and robotics concepts. It can be
+            extended with real hardware demos, videos, or LMS integration.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>RoboLearn · Robotics & Coding for Beginners</p>
+    <p>Built by a software development student passionate about teaching.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
