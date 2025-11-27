@@ -31,7 +31,7 @@ The emphasis throughout the site is clarity, simplicity, and a smooth learning e
 This project is deployed using **Vercel**, allowing it to be viewed online without requiring any setup.  
 You can access the live version here:
 
-**Vercel Link:** *[Insert your Vercel URL here]*
+**Vercel Link:** https://robolearn-portal.vercel.app/
 
 ---
 
